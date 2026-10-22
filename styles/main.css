@@ -846,6 +846,9 @@ a:hover {
   }
 }
 
+.video {
+  background-color: var(--color-bg-primary);
+}
 .video .wrapper {
   position: relative;
   display: flex;
