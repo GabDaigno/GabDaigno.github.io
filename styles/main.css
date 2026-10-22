@@ -908,12 +908,13 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   z-index: 2;
+  opacity: 50%;
   color: var(--color-white);
   transition: ease-out 0.3s;
 }
 .video .video__media .icon:hover {
-  color: var(--color-primary);
   transform: translate(-50%, -50%) scale(1);
+  opacity: 90%;
 }
 @media (max-width: 1100px) {
   .video .wrapper {
@@ -1185,9 +1186,8 @@ section {
 }
 .travail-interets .liste {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 21px 65px;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 70px;
   margin-top: 50px;
   padding: 0;
   list-style: none;
@@ -1230,6 +1230,12 @@ section {
   .travail-interets .line {
     width: 80px;
     height: 1px;
+  }
+}
+@media (max-width: 700px) {
+  .travail-interets .liste {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1668,5 +1674,111 @@ nav a:hover {
   color: var(--color-primary);
   background-color: var(--color-secondary);
   outline: 1px solid var(--color-primary);
+}
+
+/* ==========================================================================
+   scrolly / component
+   Usage : data-scrolly="fromBottom"
+   ========================================================================== */
+.has-js {
+  /* FROM BOTTOM — descriptions, listes, blocs de contenu */
+}
+.has-js [data-scrolly=fromBottom] {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(4px);
+  transition: opacity 0.7s ease-out, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
+}
+.has-js [data-scrolly=fromBottom].is-active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.has-js {
+  /* FROM LEFT — révélation horizontale (sous-titres, listes) */
+}
+.has-js [data-scrolly=fromLeft] {
+  opacity: 0;
+  transform: translateX(-25px);
+  transition: opacity 0.5s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.has-js [data-scrolly=fromLeft].is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.has-js {
+  /* FROM TOP — descente légère, idéal pour les titres h3 */
+}
+.has-js [data-scrolly=fromTop] {
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: opacity 0.6s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.has-js [data-scrolly=fromTop].is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.has-js {
+  /* FROM RIGHT — légère rotation, effet plus graphique (citation) */
+}
+.has-js [data-scrolly=fromRight] {
+  opacity: 0;
+  transform: translateX(30px) rotate(1.5deg);
+  filter: blur(3px);
+  transition: opacity 0.7s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
+}
+.has-js [data-scrolly=fromRight].is-active {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+  filter: blur(0);
+}
+.has-js {
+  /* FROM LEFT SPIN — effet éditorial */
+}
+.has-js [data-scrolly=fromLeftSpin] {
+  opacity: 0;
+  transform: translateX(-35px) rotate(-8deg);
+  transition: opacity 0.6s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.has-js [data-scrolly=fromLeftSpin].is-active {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+}
+.has-js {
+  /* FROM ZOOM — images, vidéo, éléments graphiques */
+}
+.has-js [data-scrolly=fromZoom] {
+  opacity: 0;
+  transform: scale(0.92);
+  filter: blur(5px);
+  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease;
+}
+.has-js [data-scrolly=fromZoom].is-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+.has-js {
+  /* DRAW — un trait qui se dessine de gauche à droite.
+     Pour les .trait. L'élément doit être en display: block / flex item. */
+}
+.has-js [data-scrolly=draw] {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.has-js [data-scrolly=draw].is-active {
+  transform: scaleX(1);
+}
+
+/* Accessibilité : pas d'animation si l'utilisateur les a désactivées */
+@media (prefers-reduced-motion: reduce) {
+  .has-js [data-scrolly] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    clip-path: none;
+    transition: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
