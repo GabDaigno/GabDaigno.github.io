@@ -4,506 +4,565 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Daigneault</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo-orange.svg">
+    <title>Portfolio — Gabriel Daigneault </title>
 
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
 </head>
 
-<body>
-    <header id="header" class="header">
-        <div class="wrapper">
-            <a href="index.html" class="logo">
-                <svg class="icon icon--lg">
-                    <use href="#icon-logo"></use>
-                </svg>
-            </a>
+<body class="is-loading">
 
-            <div class="header__line"></div>
-
-            <nav>
-                <ul>
-                    <a href="index.html">
-                        <li>mon hub</li>
-                    </a>
-                    <a href="projets.html">
-                        <li>projets</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
-    </header>
-</body>
-
-
-<div data-component="Scrolly">
-    <div class="hero">
-        <div class="wrapper">
-            <div class="contenu">
-                <div class="titre" data-scrolly="fromTop">
-                    <p class="profil">Design UI / UX</p>
-
-                    <!-- pas de data-scrolly ici : Rising Ink gère déjà l'intro du titre -->
-                    <h1>
-                        Gabriel
-                        <br />
-                        Daigneault
-                    </h1>
-
-                    <h2 class="subtitle" data-scrolly="fromLeft">Designer graphique · UI/UX · Création média 3D</h2>
-                </div>
-
-                <p class="description" data-scrolly="fromBottom">
-                    Je fais du design et quand ça ne suffit pas,
-                    <br />
-                    je passe en 3D
-                </p>
-
-                <a href="projets.html" class="button">
-                    voir mes projets
-                    <span class="fleche">
-                        <svg class="icon icon--sm">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                    </span>
-
-                    <!--<img src="assets/icons/fleche.svg" alt="" style="width: 24px; height: 17px" /> -->
-                </a>
+    <div class="loader" data-component="Loader">
+        <div class="loader__content">
+            <div class="loader__number">
+                <span class="loader__number-base">0%</span>
+                <span class="loader__number-fill" aria-hidden="true">0%</span>
             </div>
-
-            <div class="media" data-scrolly="fromZoom">
-                <img class="desktop" src="assets/images/moi_cercle.png" alt="" />
-                <img class="mobile" src="assets/images/moi_cercle_mobile.png" alt="" />
-            </div>
+            <p class="loader__text">Chargement portfolio</p>
         </div>
     </div>
 
-    <nav class="links" data-scrolly="fromBottom">
-        <a href="assets/cv.pdf" class="link" target="_blank">
-            <span class="nombre">01</span>
-            <span class="content">
-                <span class="nom">cv</span>
-                <svg class="icon icon--lg">
-                    <use href="#icon-fleche"></use>
-                </svg>
-            </span>
-        </a>
+    <div class="cursor" data-component="Cursor"></div> <!-- Curseur -->
 
-        <a href="https://www.linkedin.com/in/gabriel-daigneault-6a451843a/?isSelfProfile=true" class="link" target="_blank">
-            <span class="nombre">02</span>
-            <span class="content">
-                <span class="nom">linkedin</span>
-                <svg class="icon icon--lg">
-                    <use href="#icon-fleche"></use>
-                </svg>
-            </span>
-        </a>
+    <a href="#header" class="back-to-top" data-component="BackToTop" aria-label="Retour en haut"> <!-- Bouton ancre -->
+        <svg class="icon icon--sm">
+            <use href="#icon-fleche"></use>
+        </svg>
+    </a>
 
-        <a href="https://pin.it/1owgDNgSh" class="link" target="_blank">
-            <span class="nombre">03</span>
-            <span class="content">
-                <span class="nom">pinterest</span>
-                <svg class="icon icon--lg">
-                    <use href="#icon-fleche"></use>
-                </svg>
-            </span>
-        </a>
+    <div id="smooth-wrapper" data-component="Scroller">
+        <div id="smooth-content" data-component="Scrolly">
 
-        <a href="https://gabriel20daigno2.artstation.com/" class="link" target="_blank">
-            <span class="nombre">04</span>
-            <span class="content">
-                <span class="nom">artstation</span>
-                <svg class="icon icon--lg">
-                    <use href="#icon-fleche"></use>
-                </svg>
-            </span>
-        </a>
-    </nav>
+            <header id="header" class="header">
+                <div class="wrapper">
+                    <a href="index.html" class="logo">
+                        <svg class="icon icon--lg">
+                            <use href="#icon-logo"></use>
+                        </svg>
+                    </a>
 
-    <section class="valeur">
-        <div class="wrapper">
-            <div class="text">
-                <div class="titre">
-                    <h3 data-scrolly="fromTop">qui suis-je ?</h3>
-                    <span class="trait" data-scrolly="draw"></span>
+                    <div class="header__line"></div>
+
+                    <nav>
+                        <ul>
+                            <a href="index.html">
+                                <li>mon hub</li>
+                            </a>
+                            <a href="projets.html">
+                                <li>projets</li>
+                            </a>
+                        </ul>
+                    </nav>
                 </div>
+            </header>
 
-                <p class="description" data-scrolly="fromBottom">
-                    Je suis finissant en
-                    <strong>Techniques d’intégration multimédia</strong>
-                    au Cégep Édouard-Montpetit avec un profil axé sur
-                    <strong>le design graphique, UI/UX</strong>
-                    ainsi qu’à la
-                    <strong>création de média 3D</strong>
-                    . J’aime passer d’une idée à quelque chose de concret, que ce soit une interface, une identité visuelle ou un univers en 3D.
-                </p>
-            </div>
 
-            <div class="line"></div>
 
-            <p class="citation" data-scrolly="fromRight">
-                « Créatif de
-                <strong>nature</strong>
-                , designer par
-                <strong>passion</strong>
-                »
-            </p>
-        </div>
-    </section>
 
-    <section class="video">
-        <div class="wrapper">
-            <div class="titre">
-                <h3 data-scrolly="fromTop">
-                    qui suis-je
-                    <br />
-                    en 60 secondes
-                </h3>
-                <span class="trait" data-scrolly="draw"></span>
-            </div>
+            <div class="hero">
+                <div class="wrapper">
+                    <div class="contenu">
+                        <div class="titre" data-scrolly="fromTop">
+                            <p class="profil">Design UI / UX</p>
 
-            <img class="cercle" src="assets/images/cerlce_bg.png" alt="" />
+                            <!-- pas de data-scrolly ici : Rising Ink gère déjà l'intro du titre -->
+                            <h1>
+                                Gabriel
+                                <br />
+                                Daigneault
+                            </h1>
 
-            <div class="player" data-component="Youtube" data-video-id="Y4wgP-W0bNw" data-scrolly="fromZoom">
-                <div class="video__media js-video">
-                    <img class="js-poster" src="assets/images/miniature_presentation.png" alt="Vidéo de présentation" />
-
-                    <svg class="icon icon--xl">
-                        <use href="#icon-btnPlay"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="competences">
-        <div class="wrapper">
-            <div class="titre">
-                <div class="hauteur">
-                    <h3 id="competences-titre" data-scrolly="fromTop">compétences</h3>
-                </div>
-                <span class="trait" data-scrolly="draw"></span>
-            </div>
-
-            <ul class="liste">
-                <li data-scrolly="fromBottom">
-                    <span class="num">01</span>
-                    Design UI / UX
-                </li>
-                <li data-scrolly="fromBottom">
-                    <span class="num">02</span>
-                    Design graphique
-                </li>
-                <li data-scrolly="fromBottom">
-                    <span class="num">03</span>
-                    Prototypage
-                </li>
-                <li class="pas-ligne" data-scrolly="fromBottom">
-                    <span class="num">04</span>
-                    Modélisation
-                </li>
-                <li data-scrolly="fromBottom">
-                    <span class="num">05</span>
-                    Animation 2D / 3D
-                </li>
-                <li data-scrolly="fromBottom">
-                    <span class="num">06</span>
-                    Retouche d’image
-                </li>
-                <li data-scrolly="fromBottom">
-                    <span class="num">07</span>
-                    Création d’image
-                </li>
-                <li class="pas-ligne" data-scrolly="fromBottom">
-                    <span class="num">08</span>
-                    Montage vidéo et sonore
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="outils-langages">
-        <img class="cercle" src="assets/images/cerlce_bg.png" alt="" />
-
-        <div class="wrapper">
-            <div class="titre">
-                <h3 id="outils-titre" data-scrolly="fromTop">
-                    mes outils
-                    <br />
-                    et langage
-                </h3>
-                <span class="trait" data-scrolly="draw"></span>
-            </div>
-
-            <div class="contenu">
-                <ul class="outils" data-scrolly="fromBottom">
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-figma"></use>
-                            </svg>
+                            <h2 class="subtitle" data-scrolly="fromLeft">Designer graphique · UI/UX · Création média 3D</h2>
                         </div>
-                        <span class="nom">Figma</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-photoshop"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">Photoshop</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-blender"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">Blender</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-reaper"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">Reaper</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-illustrator"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">Illustrator</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-after-effect"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">After Effect</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-creative-cloud"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">Suite Adobe</span>
-                    </li>
-                </ul>
 
-                <ul class="langages" aria-label="Langages" data-scrolly="fromBottom">
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-html"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">HTML</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-css"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">CSS</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--sm">
-                                <use href="#icon-js"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">JS</span>
-                    </li>
-                    <li>
-                        <div class="pastille">
-                            <svg class="icon icon--md">
-                                <use href="#icon-php"></use>
-                            </svg>
-                        </div>
-                        <span class="nom">PHP</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+                        <p class="description" data-scrolly="fromBottom">
+                            Je fais du design et quand ça ne suffit pas,
+                            <br />
+                            je passe en 3D
+                        </p>
 
-    <section class="travail-interets">
-        <div class="wrapper">
-            <div class="bloc">
-                <div class="titre">
-                    <h3 id="travail-titre" data-scrolly="fromTop">
-                        comment
-                        <br />
-                        je travaille
-                    </h3>
-                    <span class="trait" data-scrolly="draw"></span>
-                </div>
+                        <a href="projets.html" class="button">
+                            voir mes projets
+                            <span class="fleche">
+                                <svg class="icon icon--sm">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                            </span>
 
-                <ul class="liste">
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>À l’écoute</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Créatif</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Rigoureux</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Polyvalant</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Respectueux</p>
-                    </li>
-                </ul>
-            </div>
-
-            <span class="line"></span>
-
-            <div class="bloc">
-                <div class="titre">
-                    <h3 id="interets-titre" data-scrolly="fromTop">
-                        en dehors
-                        <br />
-                        du design
-                    </h3>
-                    <span class="trait" data-scrolly="draw"></span>
-                </div>
-
-                <ul class="liste">
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Escalade</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Gym</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Snowboard</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Mode</p>
-                    </li>
-                    <li data-scrolly="fromLeft">
-                        <svg class="icon fleche">
-                            <use href="#icon-fleche"></use>
-                        </svg>
-                        <p>Amis</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="suite">
-        <div class="cercle">
-            <img src="assets/images/cercle_stroke.png" alt="" />
-        </div>
-
-        <div class="wrapper">
-            <div class="contenu">
-                <div class="titre">
-                    <h3 data-scrolly="fromTop">La suite ?</h3>
-                    <span class="trait" data-scrolly="draw"></span>
-                </div>
-
-                <p class="description" data-scrolly="fromBottom">
-                    Je veux maintenant passer à des vrais
-                    <strong>projets professionnels</strong>
-                    et je suis à la recherche d’un
-                    <strong>stage en design</strong>
-                    . J’aimerais collaborer avec d’autres professionnels, apprendre de leurs façons de travailler et découvrir le milieu. Pour moi, c’est une
-                    façon d’élargir mon savoir-faire, de gagner de l’expérience et de continuer à développer ma passion pour le design.
-                </p>
-            </div>
-        </div>
-    </section>
-</div>
-
-<div data-component="Scrolly">
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="contenu">
-                <div class="coordonnees">
-                    <div class="group" data-scrolly="fromLeft">
-                        <div class="pastille">
-                            <svg class="icon icon--md">
-                                <use href="#icon-logo"></use>
-                            </svg>
-                        </div>
-                        <div class="infos">
-                            <p class="titre">Gabriel Daigneault</p>
-                            <p class="texte">Designer graphique · UI/UX<br>Création média 3D</p>
-                        </div>
+                            <!--<img src="assets/icons/fleche.svg" alt="" style="width: 24px; height: 17px" /> -->
+                        </a>
                     </div>
 
-                    <span class="line-vertical"></span>
-
-                    <div class="group" data-scrolly="fromRight">
-                        <div class="pastille avion">
-                            <svg class="icon icon--md">
-                                <use href="#icon-avion"></use>
-                            </svg>
-                        </div>
-                        <div class="infos">
-                            <p class="titre">Contactez moi</p>
-                            <address class="texte">
-                                <a href="mailto:gab.daigno@gmail.com">gab.daigno@gmail.com</a>
-                                <a href="tel:+15148844472">(514) 884 4472</a>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group declaration" data-scrolly="fromBottom">
-                    <div class="pastille">
-                        <svg class="icon icon--md">
-                            <use href="#icon-ia"></use>
-                        </svg>
-                    </div>
-                    <div class="infos">
-                        <p class="titre">Déclaration d’IA</p>
-                        <p class="texte">Utilisée comme outil d’accompagnement pour le brainstorming, la structuration, la reformulation de contenus ainsi que pour de la rétroaction. La réalisation et les décisions du portfolio sont les miennes.</p>
+                    <div class="media" data-scrolly="fromRight">
+                        <img class="desktop" src="assets/images/moi_cercle2.png" alt="" data-speed="0.75" />
+                        <img class="mobile" src="assets/images/moi_cercle_mobile.png" alt="" />
                     </div>
                 </div>
             </div>
 
-            <p class="copyright">Tous droits réservés © 2026 Gabriel Daigneault</p>
-        </div>
-    </footer>
-</div>
+            <nav class="links" data-scrolly="fromBottom">
+                <a href="assets/cv.pdf" class="link" target="_blank">
+                    <span class="nombre">01</span>
+                    <span class="content">
+                        <span class="nom">cv</span>
+                        <svg class="icon icon--lg">
+                            <use href="#icon-fleche"></use>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/gabriel-daigneault-6a451843a/?isSelfProfile=true" class="link" target="_blank">
+                    <span class="nombre">02</span>
+                    <span class="content">
+                        <span class="nom">linkedin</span>
+                        <svg class="icon icon--lg">
+                            <use href="#icon-fleche"></use>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="https://pin.it/1owgDNgSh" class="link" target="_blank">
+                    <span class="nombre">03</span>
+                    <span class="content">
+                        <span class="nom">pinterest</span>
+                        <svg class="icon icon--lg">
+                            <use href="#icon-fleche"></use>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="https://www.artstation.com/gabriel20daigno2" class="link" target="_blank">
+                    <span class="nombre">04</span>
+                    <span class="content">
+                        <span class="nom">artstation</span>
+                        <svg class="icon icon--lg">
+                            <use href="#icon-fleche"></use>
+                        </svg>
+                    </span>
+                </a>
+            </nav>
+
+            <section class="valeur">
+                <div class="wrapper">
+                    <div class="text">
+                        <div class="titre">
+                            <h3 data-scrolly="fromTop">qui suis-je ?</h3>
+                            <span class="trait" data-scrolly="draw"></span>
+                        </div>
+
+                        <p class="description" data-scrolly="fromBottom">
+                            Je suis finissant en
+                            <strong>Techniques d’intégration multimédia</strong>
+                            au Cégep Édouard-Montpetit avec un profil axé sur
+                            <strong>le design graphique, UI/UX</strong>
+                            ainsi qu’à la
+                            <strong>création de média 3D</strong>
+                            . J’aime passer d’une idée à quelque chose de concret, que ce soit une interface, une identité visuelle ou un univers en 3D.
+                        </p>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <p class="citation" data-scrolly="fromRight">
+                        « Créatif de
+                        <strong>nature</strong>
+                        , designer par
+                        <strong>passion</strong>
+                        »
+                    </p>
+                </div>
+            </section>
+
+            <section class="video">
+                <div class="wrapper">
+                    <div class="titre">
+                        <h3 data-scrolly="fromTop">
+                            qui suis-je
+                            <br />
+                            en 60 secondes
+                        </h3>
+                        <span class="trait" data-scrolly="draw"></span>
+                    </div>
+
+                    <img class="cercle" src="assets/images/cerlce_bg.png" alt="" data-speed="0.90" />
+                    <!-- Iamge jiggle -->
+
+                    <div class="player" data-component="Youtube" data-video-id="Y4wgP-W0bNw" data-scrolly="fromZoom">
+                        <div class="video__media js-video">
+                            <img class="js-poster" src="assets/images/miniature_presentation.png" alt="Vidéo de présentation" />
+
+                            <svg class="icon icon--xl">
+                                <use href="#icon-btnPlay"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="competences">
+                <div class="wrapper">
+                    <div class="titre">
+                        <div class="hauteur">
+                            <h3 id="competences-titre" data-scrolly="fromTop">compétences</h3>
+                        </div>
+                        <span class="trait" data-scrolly="draw"></span>
+                    </div>
+
+                    <ul class="liste">
+                        <li data-scrolly="fromBottom">
+                            <span class="num">01</span>
+                            Design UI / UX
+                        </li>
+                        <li data-scrolly="fromBottom">
+                            <span class="num">02</span>
+                            Design graphique
+                        </li>
+                        <li data-scrolly="fromBottom">
+                            <span class="num">03</span>
+                            Prototypage
+                        </li>
+                        <li class="pas-ligne" data-scrolly="fromBottom">
+                            <span class="num">04</span>
+                            Modélisation
+                        </li>
+                        <li data-scrolly="fromBottom">
+                            <span class="num">05</span>
+                            Animation 2D / 3D
+                        </li>
+                        <li data-scrolly="fromBottom">
+                            <span class="num">06</span>
+                            Retouche d’image
+                        </li>
+                        <li data-scrolly="fromBottom">
+                            <span class="num">07</span>
+                            Création d’image
+                        </li>
+                        <li class="pas-ligne" data-scrolly="fromBottom">
+                            <span class="num">08</span>
+                            Montage vidéo / sonore
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="outils-langages">
+                <img class="cercle" src="assets/images/cerlce_bg.png" alt="" data-speed="0.75" />
+                <!-- Iamge jiggle -->
+
+                <div class="wrapper">
+                    <div class="titre">
+                        <h3 id="outils-titre" data-scrolly="fromTop">
+                            mes outils
+                            <br />
+                            et langage
+                        </h3>
+                        <span class="trait" data-scrolly="draw"></span>
+                    </div>
+
+                    <div class="contenu">
+                        <ul class="outils" data-scrolly="fromBottom">
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-figma"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">Figma</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-photoshop"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">Photoshop</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-blender"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">Blender</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-reaper"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">Reaper</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-illustrator"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">Illustrator</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-after-effect"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">After Effect</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-creative-cloud"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">Suite Adobe</span>
+                            </li>
+                        </ul>
+
+                        <ul class="langages" aria-label="Langages" data-scrolly="fromBottom">
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-html"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">HTML</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-css"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">CSS</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--sm">
+                                        <use href="#icon-js"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">JS</span>
+                            </li>
+                            <li>
+                                <div class="pastille">
+                                    <svg class="icon icon--md">
+                                        <use href="#icon-php"></use>
+                                    </svg>
+                                </div>
+                                <span class="nom">PHP</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="travail-interets">
+                <div class="wrapper">
+                    <div class="bloc">
+                        <div class="titre">
+                            <h3 id="travail-titre" data-scrolly="fromTop">
+                                comment
+                                <br />
+                                je travaille
+                            </h3>
+                            <span class="trait" data-scrolly="draw"></span>
+                        </div>
+
+                        <ul class="liste">
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>À l’écoute</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Créatif</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Rigoureux</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Polyvalant</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Respectueux</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <span class="line"></span>
+
+                    <div class="bloc">
+                        <div class="titre">
+                            <h3 id="interets-titre" data-scrolly="fromTop">
+                                en dehors
+                                <br />
+                                du design
+                            </h3>
+                            <span class="trait" data-scrolly="draw"></span>
+                        </div>
+
+                        <ul class="liste">
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Escalade</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Gym</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Snowboard</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Mode</p>
+                            </li>
+                            <li data-scrolly="fromLeft">
+                                <svg class="icon fleche">
+                                    <use href="#icon-fleche"></use>
+                                </svg>
+                                <p>Amis</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="suite">
+                <div class="cercle">
+                    <img src="assets/images/cercle_stroke.png" alt="" data-speed="0.85" />
+                    <!-- Iamge jiggle -->
+                </div>
+
+                <div class="wrapper">
+                    <div class="contenu">
+                        <div class="titre">
+                            <h3 data-scrolly="fromTop">La suite ?</h3>
+                            <span class="trait" data-scrolly="draw"></span>
+                        </div>
+
+                        <p class="description" data-scrolly="fromBottom">
+                            Je veux maintenant passer à des vrais
+                            <strong>projets professionnels</strong>
+                            et je suis à la recherche d’un
+                            <strong>stage en design</strong>
+                            . J’aimerais collaborer avec d’autres professionnels, apprendre de leurs façons de travailler et découvrir le milieu. Pour moi, c’est une façon
+                            d’élargir mon savoir-faire, de gagner de l’expérience et de continuer à développer ma passion pour le design.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div data-component="Scrolly">
+                <footer class="footer">
+                    <div class="wrapper">
+                        <div class="contenu">
+                            <div class="coordonnees">
+                                <div class="group" data-scrolly="fromLeft">
+                                    <div class="pastille">
+                                        <svg class="icon icon--md">
+                                            <use href="#icon-logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="infos">
+                                        <p class="titre">Gabriel Daigneault</p>
+                                        <p class="texte">Designer graphique · UI/UX<br>Création média 3D</p>
+                                    </div>
+                                </div>
+
+                                <span class="line-vertical"></span>
+
+                                <div class="group" data-scrolly="fromRight">
+                                    <div class="pastille avion">
+                                        <svg class="icon icon--md">
+                                            <use href="#icon-avion"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="infos">
+                                        <p class="titre">Contactez moi</p>
+                                        <address class="texte">
+                                            <a href="mailto:gab.daigno@gmail.com">gab.daigno@gmail.com</a>
+                                            <a href="tel:+15148844472">(514) 884 4472</a>
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="group declaration" data-scrolly="fromBottom">
+                                <div class="pastille">
+                                    <svg class="icon icon--md">
+                                        <use href="#icon-ia"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="infos accordion" data-component="Accordion">
+                                    <p class="titre">Déclaration d’IA</p>
+                                    <p class="texte">
+                                        Au cours de la création de ce portfolio, j’ai utilisé certains outils d’intelligence artificielle pour m’accompagner. Sans remplacer mes idées, mes choix créatifs ni mes décisions.
+                                    </p>
+
+                                    <div class="accordion__panel">
+                                        <div class="accordion__inner">
+                                            <div class="accordion__content">
+                                                <div class="bloc">
+                                                    <p class="titre">Idéation et rédaction — ChatGPT (OpenAI)</p>
+                                                    <p class="texte">
+                                                        Utilisé comme outil d’accompagnement pour le brainstorming, la rétroaction, la correction, la structuration et la reformulation de certains contenus. Les idées initiales, la direction artistique et les décisions de conception sont les miennes. Les suggestions générées ont été évaluées, retravaillées et adaptées à ma vision.
+                                                    </p>
+                                                </div>
+
+                                                <div class="bloc">
+                                                    <p class="titre">Intégration et programmation — Claude (Anthropic)</p>
+                                                    <p class="texte">
+                                                        Utilisé pour m’assister dans l’adaptation de composants JavaScript à mon projet, la compréhension de certains éléments de code et le débogage. J’ai intégré, ajusté et testé les solutions proposées afin de les adapter aux besoins et au fonctionnement de mon portfolio.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="button accordion__button">
+                                        Déclaration
+                                        <span class="fleche">
+                                            <svg class="icon icon--sm">
+                                                <use href="#icon-fleche"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <p class="copyright">Tous droits réservés © 2026 Gabriel Daigneault</p>
+
+                        </div> <!-- fermeture div scrolly -->
+                    </div> <!-- fermeture div scroller -->
+                </footer>
+            </div>
+
 </body>
 
 </html>
